@@ -15,7 +15,7 @@ class Handler extends Unknown
 
 	public function display(): bool
 	{
-		return version_compare($this->php_version(), '7', '>=');
+		return version_compare($this->php_version(), '8', '>=');
 	}
 
 	public function hasUpdate(): bool
