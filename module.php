@@ -256,9 +256,9 @@ class OpenCart_Module extends Webapps
 	 *
 	 * @return bool
 	 */
-	public function update_all(string $hostname, string $path = '', string $version = null): bool {
-		return $this->update($hostname, $path, $version);
-	}
+//	public function update_all(string $hostname, string $path = '', string $version = null): bool {
+//		return $this->update($hostname, $path, $version);
+//	}
 
 	/**
 	 * Update application to latest version
@@ -269,9 +269,41 @@ class OpenCart_Module extends Webapps
 	 *
 	 * @return bool
 	 */
-	public function update(string $hostname, string $path = '', string $version = null): bool {
-		// TODO: Implement update() method.
-	}
+//	public function update(string $hostname, string $path = '', string $version = null): bool {
+//		$approot = $this->getAppRoot($hostname, $path);
+//		if (! $approot) {
+//			return error('update failed');
+//		}
+//
+//		$oldversion = $this->get_version($hostname, $path);
+//		$ret = serial(function() use ($approot, $version, $hostname, $path) {
+//			if (! $version) {
+//				$version = Versioning::nextVersion($this->get_versions(),
+//					$this->get_version($hostname, $path));
+//			} else {
+//				if (! Versioning::valid($version)) {
+//					return error('invalid version number, %s', $version);
+//				}
+//			}
+//
+//			/*
+//			 * Download new package
+//			 * Rename Admin if applicable by finding the existing admin folder if it was renamed
+//			 * move storage outside the docroot
+//			 * backup or safeguard configs before moving files
+//			 * There's no way at this time to CLI update, the user will have to login as Admin
+//			 */
+//
+//			return $this->fortify($hostname, $path, data_get($this->getOptions($approot), 'fortify') ?: 'max');
+//		});
+//
+//		$this->setInfo($approot, [
+//			'version' => $ret ? $version : $oldversion,
+//			'failed'  => ! $ret
+//		]);
+//
+//		return (bool) $ret;
+//	}
 
 	/**
 	 * Get database configuration for application

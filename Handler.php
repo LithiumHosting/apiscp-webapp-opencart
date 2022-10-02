@@ -20,6 +20,6 @@ class Handler extends Unknown
 
 	public function hasUpdate(): bool
 	{
-		return true;
+		return false;
 	}
 }
